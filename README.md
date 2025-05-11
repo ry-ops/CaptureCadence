@@ -1,4 +1,4 @@
-
+![Alt text](https://github.com/ry-ops/shotclock/blob/main/ShotClock.png)
 
 **ShotClock** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
 
