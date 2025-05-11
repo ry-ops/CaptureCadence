@@ -1,4 +1,4 @@
-
+# ShotClock 🕒
 
 **ShotClock** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
 
@@ -68,6 +68,68 @@ Access the web UI at:
 3. Click **Add Website**.
 4. Screenshots will be automatically taken and saved on schedule.
 
+---
+
+## 🌍 Deployment
+
+### 🚀 Deploy to Fly.io
+
+1. **Install Fly CLI**:
+
+   ```bash
+   curl -L https://fly.io/install.sh | sh
+   ```
+
+2. **Login**:
+
+   ```bash
+   fly auth login
+   ```
+
+3. **Create App**:
+
+   ```bash
+   fly launch
+   ```
+
+4. **Deploy**:
+
+   ```bash
+   fly deploy
+   ```
+
+5. Visit your app at `https://your-app.fly.dev`.
+
+💾 **Optional: Add persistent storage**:
+
+```bash
+fly volumes create shotclock_data --size 1 --region <your-region>
+```
+
+Update `fly.toml`:
+
+```toml
+[mounts]
+  source = "shotclock_data"
+  destination = "/app/screenshots"
+```
+
+---
+
+### 🧪 Deploy to Render.com
+
+1. Push this project to GitHub.
+2. Log into [Render](https://render.com).
+3. Click **New Web Service**.
+4. Connect your repo and choose:
+
+   * **Environment**: Docker
+   * **Start Command**: `npm start`
+   * **Port**: `3000`
+5. Render will build and deploy automatically.
+
+---
+
 ## 📄 License
 
 MIT License
@@ -79,3 +141,5 @@ Made with ❤️ using Puppeteer + Node.js
 ```
 
 ---
+
+```
