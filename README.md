@@ -1,6 +1,6 @@
-![Alt text](https://github.com/ry-ops/shotclock/blob/main/ShotClock.png)
+![Alt text](https://#)
 
-**ShotClock** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
+**CaptureCadence** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
 
 ## 🚀 Features
 
