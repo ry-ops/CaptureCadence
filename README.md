@@ -79,6 +79,3 @@ Made with ❤️ using Puppeteer + Node.js
 ```
 
 ---
-
-Let me know if you’d like to add badges (e.g. Docker, Node version) or include a screenshot of the UI in the README.
-```
