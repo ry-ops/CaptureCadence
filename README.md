@@ -22,7 +22,7 @@
 Clone this repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/shotclock.git
+git clone https://github.com/ry-ops/capturecadence.git
 cd shotclock
 npm install
 npm start
@@ -64,7 +64,7 @@ Access the web UI at:
    * The website URL
    * Interval in minutes
    * Optional: folder name (relative to project root, e.g. `Photos`)
-   * Optional: base filename (e.g. `duluth`)
+   * Optional: base filename (e.g. `duluth.webp`)
 3. Click **Add Website**.
 4. Screenshots will be automatically taken and saved on schedule.
 
