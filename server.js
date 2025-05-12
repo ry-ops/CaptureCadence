@@ -1,3 +1,23 @@
+require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
+
+// Check for .env and create if missing
+const envFilePath = path.join(__dirname, '.env');
+if (!fs.existsSync(envFilePath)) {
+  console.log('.env file not found, creating a default one...');
+  fs.writeFileSync(envFilePath, `
+PORT=3000
+SCREENSHOT_INTERVAL_MINUTES=15
+SAVE_DIRECTORY=./screenshots
+BASE_FILENAME=default
+REPLACE_EXISTING=true
+`.trim());
+  console.log('.env file created with default values.');
+}
+
+// Rest of your server code here...
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const puppeteer = require('./puppeteer');
