@@ -1,7 +1,7 @@
 {
-  "name": "shotclock",
+  "name": "capturecadence",
   "version": "1.0.0",
-  "description": "ShotClock - Timed full-page website screenshot saver using Puppeteer and Docker.",
+  "description": "CaptureCadence - Timed full-page website screenshot saver using Puppeteer and Docker.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
