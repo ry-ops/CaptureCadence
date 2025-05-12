@@ -1,4 +1,4 @@
-![Alt text](https://#)
+![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.jpg)
 
 **CaptureCadence** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
 
@@ -22,7 +22,7 @@
 Clone this repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/shotclock.git
+git clone https://github.com/ry-ops/capturecadence.git
 cd shotclock
 npm install
 npm start
@@ -64,7 +64,7 @@ Access the web UI at:
    * The website URL
    * Interval in minutes
    * Optional: folder name (relative to project root, e.g. `Photos`)
-   * Optional: base filename (e.g. `duluth`)
+   * Optional: base filename (e.g. `duluth.webp`)
 3. Click **Add Website**.
 4. Screenshots will be automatically taken and saved on schedule.
 
