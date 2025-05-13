@@ -1,14 +1,14 @@
 {
   "name": "capturecadence",
   "version": "1.0.0",
-  "description": "CaptureCadence - Timed full-page website screenshot saver using Puppeteer and Docker.",
+  "description": "Automated full-page web screenshot tool with GUI",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "author": "ry-ops",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "puppeteer": "^22.8.2"
+    "puppeteer": "^22.8.2",
+    "node-schedule": "^2.1.0",
+    "dotenv": "^16.3.1"
   }
 }
