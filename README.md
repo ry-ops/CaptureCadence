@@ -23,7 +23,7 @@ Clone this repository and install dependencies:
 
 ```bash
 git clone https://github.com/ry-ops/capturecadence.git
-cd shotclock
+cd capturecadence
 npm install
 npm start
 ````
@@ -36,8 +36,8 @@ Then open your browser to:
 To build and run the app in a container:
 
 ```bash
-docker build -t shotclock .
-docker run -p 3000:3000 -v $(pwd)/screenshots:/app/screenshots shotclock
+docker build -t capturecadence .
+docker run -p 3000:3000 -v $(pwd)/screenshots:/app/screenshots capturecadence
 ```
 
 Access the web UI at:
@@ -103,14 +103,14 @@ Access the web UI at:
 💾 **Optional: Add persistent storage**:
 
 ```bash
-fly volumes create shotclock_data --size 1 --region <your-region>
+fly volumes create capturecadence_data --size 1 --region <your-region>
 ```
 
 Update `fly.toml`:
 
 ```toml
 [mounts]
-  source = "shotclock_data"
+  source = "capturecadence_data"
   destination = "/app/screenshots"
 ```
 
