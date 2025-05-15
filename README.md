@@ -138,4 +138,4 @@ Licensed under the MIT License — free for personal or commercial use.
 
 Got feedback? Want to show off how you’re using Capture Cadence? Open a discussion or tag the repo ⭐
 
-``
+---
