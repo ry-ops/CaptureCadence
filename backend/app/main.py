@@ -6,6 +6,10 @@ app = FastAPI()
 
 app.include_router(router, prefix="/api")
 
+@app.get("/")
+def root():
+    return {"status": "Capture Cadence backend is running"}
+    
 @app.on_event("startup")
 async def startup_event():
     # Load your config however you want — environment variables, file, etc.
