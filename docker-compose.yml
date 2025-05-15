@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: capture-cadence-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data   # Mounted folder for captures output
+    environment:
+      # You can add env vars here if needed
+      # Example: LOG_LEVEL=info
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: capture-cadence-frontend
+    ports:
+      - "3000:80"   # nginx serves frontend on port 80 inside container mapped to 3000 locally
+    depends_on:
+      - backend
+    restart: unless-stopped
