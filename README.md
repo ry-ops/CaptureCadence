@@ -1,6 +1,6 @@
 ![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.jpg)
 
-# 🎥✨ Capture Cadence
+# 🎥✨ Capture-Cadence
 
 > Automate UniFi Protect camera snapshots & clips — beautifully, simply, on your own terms.
 
@@ -11,9 +11,9 @@
 
 ---
 
-## 🔧 What is Capture Cadence?
+## 🔧 What is Capture-Cadence?
 
-**Capture Cadence** is your ✨ personal UniFi Protect assistant ✨ — a Python-powered scheduler and admin portal for:
+**Capture-Cadence** is your ✨ personal UniFi Protect assistant ✨ — a Python-powered scheduler and admin portal for:
 
 - 📸 **Taking camera snapshots** at regular intervals
 - 🎞️ **Recording video clips** on a customizable schedule
