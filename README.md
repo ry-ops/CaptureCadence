@@ -1,4 +1,4 @@
-![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.png)
+![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.jpg)
 
 # 🎥✨ Capture Cadence
 
