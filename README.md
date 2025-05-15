@@ -104,12 +104,12 @@ capture_cadence/
 ├── static/
 │   └── style.css
 ├── templates/
-│   └── index.html
+│   ├── index.html
+│   └── admin.html
 ├── snapshot.py
 ├── clip.py
-├── clips/  # directory to store video clips
-└── snapshots/  # directory to store image snapshots
-```
+├── clips/          # directory to store video clips
+└── snapshots/      # directory to store image snapshots
 
 ---
 
