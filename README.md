@@ -97,18 +97,17 @@ docker run -d -p 8000:8000 --name cadence capture-cadence
 ## 📂 Project Structure
 
 ```
-capture-cadence/
-├── capture_cadence/
-│   ├── app.py               # FastAPI backend
-│   ├── config.json          # Stored config
-│   ├── templates/           # HTML for admin UI
-│   └── static/              # (optional future CSS/JS)
-├── snapshots/               # Saved snapshots
-├── clips/                   # Saved video clips
-├── .env.example             # Sample environment vars
-├── Dockerfile               # Docker build setup
-├── requirements.txt         # Python dependencies
-└── README.md                # This file
+capture_cadence/
+├── __init__.py
+├── app.py
+├── config.json
+├── static/
+│   └── style.css
+├── templates/
+│   └── index.html
+├── snapshot.py
+├── clip.py
+└── clips/  # directory to store video clips
 ```
 
 ---
