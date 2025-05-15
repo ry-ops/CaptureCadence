@@ -63,7 +63,7 @@ Easily configure:
 ### 🛠 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/capture-cadence.git
+git clone https://github.com/ry-ops/capture-cadence.git
 cd capture-cadence
 python3 -m venv venv
 source venv/bin/activate
