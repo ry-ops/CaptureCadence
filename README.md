@@ -98,23 +98,21 @@ docker run -d -p 8000:8000 --name cadence capture-cadence
 
 ```
 capture-cadence/
-├── .env
-├── Dockerfile
-├── README.md
-├── requirements.txt
-├── config.json
 ├── app/
 │   ├── __init__.py
-│   ├── main.py          # (formerly app.py)
+│   ├── main.py
+│   ├── config.py
 │   ├── snapshot.py
 │   ├── clip.py
-│   ├── static/
-│   │   └── style.css    # example static file
 │   ├── templates/
-│   │   └── index.html   # example Jinja2 template
-│   ├── snapshots/       # stores snapshot images
-│   └── clips/           # stores video clips
-└── CaptureCadence.png
+│   │   └── index.html
+│   ├── static/
+│       └── styles.css
+├── .env
+├── .gitignore
+├── Dockerfile
+├── requirements.txt
+├── README.md
 
 ...
 
