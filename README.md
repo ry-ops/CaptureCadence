@@ -1,145 +1,146 @@
 ![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.jpg)
 
-**CaptureCadence** is a lightweight web app and Dockerized service that takes full-page screenshots of websites on a schedule. It uses [Puppeteer](https://pptr.dev/) for browser automation and provides a simple web interface to add, customize, and manage screenshot jobs.
+Here's a polished and "snazzy" **README.md** for your GitHub project **Capture Cadence**, complete with emojis, badges, and a showcase-style tone:
 
-## 🚀 Features
+---
 
-- 📸 Full-page screenshots of any URL
-- 🕓 Customizable screenshot interval per site (in minutes)
-- 🗂️ Choose the destination folder for each image
-- 📝 Set a custom base name for saved files
-- 🔁 Overwrite images automatically with consistent filenames (e.g. `duluth.webp`)
-- 💾 Images saved in `.webp` format for efficient storage
-- 🧰 Docker-ready for easy deployment
+````markdown
+# 🎥✨ Capture Cadence
 
-## 📦 Requirements
+> Automate UniFi Protect camera snapshots & clips — beautifully, simply, on your own terms.
 
-- [Docker](https://www.docker.com/) (for containerized setup)
-- Or: Node.js (v18+) and npm for local development
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/Powered%20by-FastAPI-009688?logo=fastapi)
+![Docker Ready](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🛠️ Local Development
+---
 
-Clone this repository and install dependencies:
+## 🔧 What is Capture Cadence?
+
+**Capture Cadence** is your ✨ personal UniFi Protect assistant ✨ — a Python-powered scheduler and admin portal for:
+
+- 📸 **Taking camera snapshots** at regular intervals
+- 🎞️ **Recording video clips** on a customizable schedule
+- 🧠 **Managing settings via a clean web portal**
+- 🧰 Built with `FastAPI`, `APScheduler`, and `httpx`
+
+Perfect for Raspberry Pi, home labs, small businesses, or anyone with a UniFi camera system looking to automate time-based media capture!
+
+---
+
+## 🌟 Features
+
+✅ Snapshot scheduler (e.g. every hour)  
+✅ Video clip recorder (custom duration + interval)  
+✅ Web-based Admin Portal for live config  
+✅ Manual "snap now" / "record now" buttons  
+✅ Stores snapshots and clips in organized folders  
+✅ Runs on Pi, Linux, or inside Docker 🐳  
+✅ Lightweight & local — no cloud required
+
+---
+
+## 🖥️ Admin Portal
+
+> Accessible via `http://<your-device-ip>:8000`
+
+Easily configure:
+
+- 🌐 UniFi Host IP
+- 👤 Username & 🔐 Password
+- 🕒 Snapshot & Clip Frequency
+- ⏱️ Clip Duration
+- 📁 Output Directory
+
+---
+
+## 🚀 Getting Started
+
+### 🧪 Requirements
+
+- Python 3.9+ or Docker
+- Raspberry Pi / Linux / Mac / WSL / etc.
+- UniFi Protect cameras on the same network
+
+---
+
+### 🛠 Installation
 
 ```bash
-git clone https://github.com/ry-ops/capturecadence.git
-cd capturecadence
-npm install
-npm start
+git clone https://github.com/YOUR_USERNAME/capture-cadence.git
+cd capture-cadence
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
 ````
 
-Then open your browser to:
-`http://localhost:3000`
+Update `.env` with your UniFi details and desired output location.
 
-## 🐳 Docker Usage
+---
 
-To build and run the app in a container:
+### ▶️ Run the App
 
 ```bash
-docker build -t capturecadence .
-docker run -p 3000:3000 -v $(pwd)/screenshots:/app/screenshots capturecadence
+python3 -m capture_cadence.app
 ```
 
-Access the web UI at:
-`http://localhost:3000`
-
-## 📁 Project Structure
-
-```
-.
-├── Dockerfile
-├── puppeteer.js       # Screenshot logic
-├── server.js          # Express server & scheduler
-├── urls.json          # Saved job config
-├── ui/
-│   └── index.html     # Web interface
-└── screenshots/       # Output directory for .webp files
-```
-
-## ✏️ Usage
-
-1. Open the web interface.
-2. Enter:
-
-   * The website URL
-   * Interval in minutes
-   * Optional: folder name (relative to project root, e.g. `Photos`)
-   * Optional: base filename (e.g. `duluth.webp`)
-3. Click **Add Website**.
-4. Screenshots will be automatically taken and saved on schedule.
+Visit `http://localhost:8000` in your browser 🎉
 
 ---
 
-## 🌍 Deployment
-
-### 🚀 Deploy to Fly.io
-
-1. **Install Fly CLI**:
-
-   ```bash
-   curl -L https://fly.io/install.sh | sh
-   ```
-
-2. **Login**:
-
-   ```bash
-   fly auth login
-   ```
-
-3. **Create App**:
-
-   ```bash
-   fly launch
-   ```
-
-4. **Deploy**:
-
-   ```bash
-   fly deploy
-   ```
-
-5. Visit your app at `https://your-app.fly.dev`.
-
-💾 **Optional: Add persistent storage**:
+### 🐳 Docker (optional)
 
 ```bash
-fly volumes create capturecadence_data --size 1 --region <your-region>
-```
-
-Update `fly.toml`:
-
-```toml
-[mounts]
-  source = "capturecadence_data"
-  destination = "/app/screenshots"
+docker build -t capture-cadence .
+docker run -d -p 8000:8000 --name cadence capture-cadence
 ```
 
 ---
 
-### 🧪 Deploy to Render.com
+## 📂 Project Structure
 
-1. Push this project to GitHub.
-2. Log into [Render](https://render.com).
-3. Click **New Web Service**.
-4. Connect your repo and choose:
-
-   * **Environment**: Docker
-   * **Start Command**: `npm start`
-   * **Port**: `3000`
-5. Render will build and deploy automatically.
-
----
-
-## 📄 License
-
-MIT License
-
----
-
-Made with ❤️ using Puppeteer + Node.js
-
+```
+capture-cadence/
+├── capture_cadence/
+│   ├── app.py               # FastAPI backend
+│   ├── config.json          # Stored config
+│   ├── templates/           # HTML for admin UI
+│   └── static/              # (optional future CSS/JS)
+├── snapshots/               # Saved snapshots
+├── clips/                   # Saved video clips
+├── .env.example             # Sample environment vars
+├── Dockerfile               # Docker build setup
+├── requirements.txt         # Python dependencies
+└── README.md                # This file
 ```
 
 ---
+
+## 🔮 Coming Soon
+
+* 🗃️ Multi-camera support
+* 🧪 Health checks & logs in UI
+* ⏰ More scheduling options (e.g. CRON)
+* ☁️ Optional cloud upload targets
+
+---
+
+## 🤝 Contribute
+
+Pull requests are welcome! If you'd like to add features or suggest ideas, open an issue or fork the project 🚀
+
+---
+
+## 📜 License
+
+Licensed under the MIT License — free for personal or commercial use.
+
+---
+
+## 👋 Made with 🧡 by \[Your Name or Org]
+
+> Got feedback? Want to show off how you’re using Capture Cadence? Open a discussion or tag the repo ⭐
 
 ```
