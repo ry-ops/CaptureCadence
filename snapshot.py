@@ -1,8 +1,10 @@
 import asyncio
+import json, os
+
+CONFIG_PATH = "capture_cadence/config.json"
+SNAPSHOTS_DIR = "capture_cadence/snapshots"
 
 def load_config():
-    import json, os
-    CONFIG_PATH = "capture_cadence/config.json"
     if not os.path.exists(CONFIG_PATH):
         with open(CONFIG_PATH, "w") as f:
             json.dump({}, f)
@@ -12,4 +14,6 @@ def load_config():
 async def take_snapshots():
     config = load_config()
     print("[Snapshot] Capturing snapshots for configured cameras...")
-    await asyncio.sleep(1)  # Simulate async snapshot logic
+    # TODO: Implement actual UniFi Protect API snapshot logic here
+    # Save snapshot files to SNAPSHOTS_DIR
+    await asyncio.sleep(1)  # simulate async operation
