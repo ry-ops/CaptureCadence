@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Cadence Admin</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Admin - Saved Snapshots and Clips</h1>
+
+    <h2>Snapshots</h2>
+    {% if snapshots %}
+        <ul>
+            {% for snapshot in snapshots %}
+            <li><a href="/snapshots/{{ snapshot }}" target="_blank">{{ snapshot }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No snapshots found.</p>
+    {% endif %}
+
+    <h2>Clips</h2>
+    {% if clips %}
+        <ul>
+            {% for clip in clips %}
+            <li><a href="/clips/{{ clip }}" target="_blank">{{ clip }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No clips found.</p>
+    {% endif %}
+
+    <p><a href="/">Back to Settings</a></p>
+</body>
+</html>
