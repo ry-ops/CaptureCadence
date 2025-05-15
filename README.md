@@ -107,7 +107,8 @@ capture_cadence/
 │   └── index.html
 ├── snapshot.py
 ├── clip.py
-└── clips/  # directory to store video clips
+├── clips/  # directory to store video clips
+└── snapshots/  # directory to store image snapshots
 ```
 
 ---
