@@ -1,10 +1,5 @@
 ![Alt text](https://github.com/ry-ops/CaptureCadence/blob/main/CaptureCadence.jpg)
 
-Here's a polished and "snazzy" **README.md** for your GitHub project **Capture Cadence**, complete with emojis, badges, and a showcase-style tone:
-
----
-
-````markdown
 # 🎥✨ Capture Cadence
 
 > Automate UniFi Protect camera snapshots & clips — beautifully, simply, on your own terms.
