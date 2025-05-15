@@ -1,1 +1,0 @@
-# Snapshot capture logic
