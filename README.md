@@ -97,21 +97,19 @@ docker run -d -p 8000:8000 --name cadence capture-cadence
 ## 📂 Project Structure
 
 ```
-capture_cadence/
-├── __init__.py
-├── app.py
-├── config.json
-├── static/
-│   └── style.css
-├── templates/
-│   ├── index.html
-│   └── admin.html
-├── snapshot.py
-├── clip.py
-├── clips/          # directory to store video clips
-└── snapshots/      # directory to store image snapshots
+capture-cadence/
+├── app/
+│   ├── app.py
+│   ├── clip.py
+│   ├── snapshot.py
+│   ├── config.json
+│   ├── __init__.py
+│   ├── snapshots/      ← auto-created
+│   ├── clips/          ← auto-created
+│   ├── static/
+│   └── templates/
+...
 
----
 
 ## 🔮 Coming Soon
 
