@@ -3,11 +3,14 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy everything inside backend folder to /app in container
-COPY . .
+# Copy only requirements.txt first for better caching
+COPY requirements.txt .
 
-# Install dependencies from requirements.txt without caching
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
 
 EXPOSE 5000
 
