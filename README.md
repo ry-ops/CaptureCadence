@@ -98,21 +98,30 @@ docker run -d -p 8000:8000 --name cadence capture-cadence
 
 ```
 capture-cadence/
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── config.py
-│   ├── snapshot.py
-│   ├── clip.py
-│   ├── templates/
-│   │   └── index.html
-│   ├── static/
-│       └── styles.css
-├── .env
-├── .gitignore
-├── Dockerfile
-├── requirements.txt
-├── README.md
+├── backend/
+│   ├── app/
+│   │   ├── main.py             # FastAPI app entrypoint
+│   │   ├── api.py              # API routes (settings, cameras, capture, schedule)
+│   │   ├── unifi_client.py     # UniFi Access API integration
+│   │   ├── scheduler.py        # Scheduling logic with APScheduler
+│   │   ├── models.py           # Pydantic models (settings, schedules, etc.)
+│   │   └── ...
+│   ├── requirements.txt        # Python dependencies
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── components/
+│   │   └── ...
+│   ├── package.json
+│   ├── vite.config.js          # or CRA config
+│   └── Dockerfile
+│
+├── docker-compose.yml          # to orchestrate backend + frontend containers
+└── README.md
+
 
 ...
 
